@@ -43,7 +43,8 @@ class Scraping:
 
     def next_page(self):
         #delay clicking button - more human behaviour
-        sleep(3)
+        #website doesnt block program without it so if performance is an issue it can be deleted
+        sleep(1)
         try:
             self.driver.find_element(By.XPATH, '//li[@class="next"]/a').click()
         except:
